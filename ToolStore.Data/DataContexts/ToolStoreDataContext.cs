@@ -12,8 +12,8 @@ namespace ToolStore.Data.DataContexts
             Database.SetInitializer<ToolStoreDataContext>( new ToolStoreDataContextInitializer());
         }
 
-        public DbSet<Tool> Tools { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public IDbSet<Tool> Tools { get; set; }
+        public IDbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
