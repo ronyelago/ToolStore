@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
+using ToolStore.Data.Mappings;
 using ToolStore.Domain;
 
 namespace ToolStore.Data.DataContexts
@@ -14,6 +15,12 @@ namespace ToolStore.Data.DataContexts
         public DbSet<Tool> Tools { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new ToolMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     public class ToolStoreDataContextInitializer : DropCreateDatabaseIfModelChanges<ToolStoreDataContext>
