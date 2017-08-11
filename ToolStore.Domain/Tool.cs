@@ -19,7 +19,7 @@ namespace ToolStore.Domain
 
         public override string ToString()
         {
-            return this.Title;
+            return string.Format("Id: {0} | Título: {1}", Id, Title);
         }
     }
 }
