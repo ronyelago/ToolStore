@@ -11,6 +11,11 @@ namespace ToolStore.Api.Controllers
 {
     public class ToolController : ApiController
     {
+        public ToolController()
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+        }
+
         private ToolStoreDataContext db = new ToolStoreDataContext();
 
         // GET: api/Tool
