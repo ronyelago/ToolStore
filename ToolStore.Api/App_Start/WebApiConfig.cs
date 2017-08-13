@@ -13,14 +13,14 @@ namespace ToolStore.Api
             var jsonFormatter = formatters.JsonFormatter;
             var settings = jsonFormatter.SerializerSettings;
 
-            jsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
-            // Remove o xml
+            jsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            // Desabilita o retorno de XML
             config.Formatters.Remove(config.Formatters.XmlFormatter);
             // Identação do retorno dos json's
-            settings.Formatting = Formatting.Indented; 
-            // Nomes de propriedades
-            settings.ContractResolver = new CamelCasePropertyNamesContractResolver(); 
-            
+            settings.Formatting = Formatting.Indented;
+            // Nomes de propriedades em letras minúsculas
+            settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

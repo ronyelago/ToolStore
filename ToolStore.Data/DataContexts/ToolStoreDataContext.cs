@@ -9,7 +9,10 @@ namespace ToolStore.Data.DataContexts
     {
         public ToolStoreDataContext() : base("ToolStoreConnectionString")
         {
-            Database.SetInitializer<ToolStoreDataContext>( new ToolStoreDataContextInitializer());
+            //Database.SetInitializer<ToolStoreDataContext>( new ToolStoreDataContextInitializer());
+            Configuration.LazyLoadingEnabled = false;
+            // Desabilita a criação de proxy
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public IDbSet<Tool> Tools { get; set; }
