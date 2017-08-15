@@ -22,10 +22,10 @@ namespace ToolStore.Api.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        [Route("tool/{id}")]
+        [Route("tools/{toolId}")]
         public HttpResponseMessage GetTool(int ToolId)
         {
-            var result = db.Tools.Select(x => x.Id == ToolId);
+            var result = db.Tools.FirstOrDefault(x => x.Id == ToolId);
 
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
