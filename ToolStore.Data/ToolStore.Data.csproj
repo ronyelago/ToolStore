@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContexts\ToolStoreDataContext.cs" />
+    <Compile Include="DataContexts\ToolStoreDataContextInitializer.cs" />
     <Compile Include="Mappings\CategoryMap.cs" />
     <Compile Include="Mappings\ToolMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
