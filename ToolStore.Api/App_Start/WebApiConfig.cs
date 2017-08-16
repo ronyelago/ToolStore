@@ -20,6 +20,7 @@ namespace ToolStore.Api
             settings.Formatting = Formatting.Indented;
             // Nomes de propriedades em letras minúsculas
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.EnableCors();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
