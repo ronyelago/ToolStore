@@ -9,7 +9,7 @@ using ToolStore.Domain;
 
 namespace ToolStore.Api.Controllers
 {
-    
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/v1/public")]
 
     public class ToolController : ApiController
