@@ -6,7 +6,7 @@ namespace ToolStore.Domain
     {
         public Tool()
         {
-            this.AcquireDate = DateTime.Now; //&%
+            this.AcquireDate = DateTime.Now; //&%&
         }
 
         public int Id { get; set; }
